@@ -1,0 +1,4 @@
+conf/
+app/application/configs/.config.json
+*.log
+**/*.log
