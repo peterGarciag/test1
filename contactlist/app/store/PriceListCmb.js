@@ -3,10 +3,11 @@ Ext.define('contactlist.store.PriceListCmb', {
     fields: ['id', 'name'],
     alias: 'store.pricelistcmb',
     autoLoad: false,
+    requires: ['Ext.window.Toast'],
     proxy: {
         type: 'ajax',
         api: {
-            read: 'http://localhost/zend/index/get-price-list/format/json'
+            read: '/index/get-price-list/format/json'
         },
         reader: {
             type: 'json',
@@ -37,7 +38,6 @@ Ext.define('contactlist.store.PriceListCmb', {
             var action = "";
             var s = [];
             if (request._action == 'read') {
-                console.log("read");
                 if (!request._operation.success) {
                     action = "cargando";
 

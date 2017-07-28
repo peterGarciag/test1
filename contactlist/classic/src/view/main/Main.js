@@ -14,7 +14,8 @@ Ext.define('contactlist.view.main.Main', {
         'Ext.window.MessageBox',
         'contactlist.view.main.MainController',
         'contactlist.view.main.MainModel',
-        'contactlist.view.main.List'
+        'contactlist.view.main.List',
+        
     ],
 
     controller: 'main',

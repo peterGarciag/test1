@@ -21,13 +21,14 @@
      * Set up the store's data source
      *     NOTE: The different URLs for CRUD
      */
+    requires: ['Ext.window.Toast'],
      proxy : {
         type: 'ajax',
         api: {
-            read    : 'http://localhost/zend/index/get/format/json',
-            update  : 'http://localhost/zend/index/edit/format/json',
-            create  : 'http://localhost/zend/index/add/format/json',
-            destroy : 'http://localhost/zend/index/delete/format/json',
+            read    : '/index/get/format/json',
+            update  : '/index/edit/format/json',
+            create  : '/index/add/format/json',
+            destroy : '/index/delete/format/json',
         },
         reader: {
             idProperty: 'id',

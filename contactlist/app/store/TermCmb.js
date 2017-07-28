@@ -2,11 +2,12 @@ Ext.define('contactlist.store.TermCmb', {
     extend: 'Ext.data.Store',
     fields: ['id', 'name'],
     alias: 'store.termcmb',
+    requires: ['Ext.window.Toast'],
     autoLoad: false,
     proxy: {
         type: 'ajax',
         api: {
-            read: 'http://localhost/zend/index/get-term/format/json'
+            read: '/index/get-term/format/json'
         },
         reader: {
             type: 'json',
@@ -37,7 +38,7 @@ Ext.define('contactlist.store.TermCmb', {
             var action = "";
             var s = [];
             if (request._action == 'read') {
-                console.log("read");
+               
                 if (!request._operation.success) {
                     action = "cargando";
 

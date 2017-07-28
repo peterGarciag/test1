@@ -41,7 +41,7 @@ Ext.define('contactlist.view.main.Contact.contactEdit', {
             layout: 'fit',
             listeners: {
                 beforeedit:function(){
-                    console.log("se supone qeu soyy de solo lectura ",this.readonly);
+                   
                     return this.readonly;
                 },
                 edit:  function (editor, edit) {
@@ -240,7 +240,6 @@ Ext.define('contactlist.view.main.Contact.contactEdit', {
                         var form = Ext.getCmp('newData').form,
                        store = grid.getStore(), 
                         values, model;
-                        console.log(form,store);
                         if (form.isValid()) {
                             values = form.getValues();
                             model = Ext.create('contactlist.model.InternalContact', values);

@@ -3,7 +3,7 @@ conf/
 app/application/configs/.config.json
 *.log
 **/*.log
-
+*/build/
 # Composer files
 composer.phar
 vendor/
